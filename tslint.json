@@ -38,7 +38,6 @@
           ]
         }
     ],
-    "quotemark": [true, "single", "jsx-double"],
     "no-any": true,
     "no-object": true,
     "ban-ts-ignore-except-imports": true,
