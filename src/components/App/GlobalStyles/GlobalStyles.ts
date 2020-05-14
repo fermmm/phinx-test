@@ -5,6 +5,7 @@ export const GlobalStyles: GlobalStyleComponent<{}, {}> = createGlobalStyle`
       margin: 0;
       padding: 0;
       overflow-x: hidden;
+      background-color: ${props => props.theme.colors.background1};
    }
    
    a:hover, a:visited, a:link, a:active {

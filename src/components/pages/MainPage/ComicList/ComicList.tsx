@@ -5,7 +5,7 @@ import ComicItem from "./ComicInfoSmall/ComicItem";
 
 const ComicList: FC = () => {
    return (
-      <Modal visible={false} title={"Spider-man"} >
+      <Modal visible={true} title={"Spider-man"} >
          <ComicItem />
          <ComicItem />
          <ComicItem />
