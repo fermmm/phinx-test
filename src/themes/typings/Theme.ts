@@ -1,5 +1,6 @@
 export interface Theme {
    colors: ThemeColors;
+   shadows: ThemeShadows;
 }
 
 interface ThemeColors {
@@ -8,5 +9,10 @@ interface ThemeColors {
    text1: string;
    text2: string;
    text3: string;
-   test: string;
+   divider: string;
+}
+
+interface ThemeShadows {
+   elevation1: string;
+   divider: string;
 }
