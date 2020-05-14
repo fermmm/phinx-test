@@ -16,8 +16,9 @@ export const CharacterContainer = styled("div")`
 
 export const CharacterName = styled("div")`
    color:  ${props => props.theme.colors.text4};
-   font-family: ${props => props.theme.fonts.font1};
+   font-family: ${props => props.theme.fonts.font2};
    font-size: ${props => props.theme.fonts.size1};
+   font-weight: ${props => props.theme.fonts.weight1};
 `;
 
 export const IconButtonStyled = styled(IconButton)`

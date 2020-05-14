@@ -8,6 +8,8 @@ export const defaultTheme: Theme = {
       text2: "#505050",
       text3: "#3E3E3E",
       text4: "#FFFFFF",
+      text5: "#808080",
+      text6: "#515151",
       divider: "#0000000a"
    },
    shadows: {
@@ -16,9 +18,13 @@ export const defaultTheme: Theme = {
    },
    fonts: {
       font1: "'Roboto', sans-serif",
-      font2: "'Roboto', sans-serif",
+      font2: "'Montserrat', sans-serif",
       size1: "22px",
       size2: "30px",
-      size3: "20px"
+      size3: "20px",
+      size4: "25px",
+      size5: "12px",
+      weight1: "600",
+      weight2: "700"
    }
 };

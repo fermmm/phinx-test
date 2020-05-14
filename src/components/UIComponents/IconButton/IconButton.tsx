@@ -3,11 +3,11 @@ import { ButtonStyled } from "./IconButton.styles";
 import { Icon } from "../Icon/Icon";
 
 interface PropsIconButton extends React.HTMLAttributes<HTMLButtonElement> {
-   id: string;
+   iconId: string;
 }
 
-export const IconButton: FC<PropsIconButton> = ({ id, ...remainingProps }) => (
+export const IconButton: FC<PropsIconButton> = ({ iconId, ...remainingProps }) => (
    <ButtonStyled {...remainingProps}>
-      <Icon id={id}/>
+      <Icon iconId={iconId}/>
    </ButtonStyled>
 );

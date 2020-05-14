@@ -16,10 +16,10 @@ const SearchBar: FC = () => {
          <img src={marvelLogo} />
          <Divider />
          <InputStyled
-            icon={<SearchIconStyled id={"search"} />}
+            icon={<SearchIconStyled iconId={"search"} />}
             placeholder={"Buscar..."}
          />
-         <IconButtonStyled id={"star_border"} onClick={() => console.log("clicked")} />
+         <IconButtonStyled iconId={"star_border"} onClick={() => console.log("clicked")} />
          <Divider />
       </SearchBarContainer>
    );

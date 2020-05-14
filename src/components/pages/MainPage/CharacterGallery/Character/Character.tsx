@@ -5,7 +5,7 @@ import { CharacterContainer, CharacterName, IconButtonStyled } from './Character
 const Character: FC = () => {
    return (
       <CharacterContainer >
-         <IconButtonStyled id={'star'}/>
+         <IconButtonStyled iconId={'star'}/>
          <CharacterName>
             Spider-Man
          </CharacterName>

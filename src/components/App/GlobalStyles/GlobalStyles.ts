@@ -4,6 +4,7 @@ export const GlobalStyles: GlobalStyleComponent<{}, {}> = createGlobalStyle`
    html, body {
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
    }
    
    a:hover, a:visited, a:link, a:active {
@@ -18,5 +19,20 @@ export const GlobalStyles: GlobalStyleComponent<{}, {}> = createGlobalStyle`
    
    *, :after, :before {
       box-sizing: border-box;  /* Do not include border and margin in the sizes numbers */
+   }
+
+   ::-webkit-scrollbar {
+      width: 4px;
+      margin: 2px;
+   }
+
+   ::-webkit-scrollbar-track {
+      background: white;
+      border-radius: 4px;
+   }
+
+   ::-webkit-scrollbar-thumb {
+      background: #565656;
+      border-radius: 5px;
    }
 `;
