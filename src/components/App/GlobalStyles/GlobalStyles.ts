@@ -22,17 +22,17 @@ export const GlobalStyles: GlobalStyleComponent<{}, {}> = createGlobalStyle`
    }
 
    ::-webkit-scrollbar {
-      width: 4px;
+      width: 7px;
       margin: 2px;
    }
 
    ::-webkit-scrollbar-track {
-      background: white;
-      border-radius: 4px;
+      background: ${props => props.theme.colors.scrollbar};
+      border-radius: ${props => props.theme.borders.borderRadius1};
    }
 
    ::-webkit-scrollbar-thumb {
-      background: #565656;
-      border-radius: 5px;
+      background: ${props => props.theme.colors.scrollbarThumb};
+      border-radius: ${props => props.theme.borders.borderRadius1};
    }
 `;

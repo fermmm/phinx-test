@@ -2,6 +2,7 @@ export interface Theme {
    colors: ThemeColors;
    shadows: ThemeShadows;
    fonts: ThemeFonts;
+   borders: ThemeBorders;
 }
 
 interface ThemeColors {
@@ -13,12 +14,14 @@ interface ThemeColors {
    text4: string;
    text5: string;
    text6: string;
+   scrollbar: string;
+   scrollbarThumb: string;
    divider: string;
 }
 
 interface ThemeShadows {
    elevation1: string;
-   divider: string;
+   dividerShadow: string;
 }
 
 interface ThemeFonts {
@@ -33,3 +36,7 @@ interface ThemeFonts {
    weight2: string;
 }
 
+interface ThemeBorders {
+   borderRadius1: string;
+   borderRadius2: string;
+}

@@ -17,7 +17,7 @@ export const ImageContainer = styled("div")`
    overflow: hidden;
    height: 94px;
    margin-right: 13px;
-   border-radius: 5px;
+   border-radius: ${props => props.theme.borders.borderRadius1};
 `;
 
 export const PreviewImage = styled("img")`

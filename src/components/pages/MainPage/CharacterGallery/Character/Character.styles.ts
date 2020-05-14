@@ -11,7 +11,7 @@ export const CharacterContainer = styled("div")`
    background-color: red;
    margin: 15px 17.5px;
    padding: 26px 23px;
-   border-radius: 5px;
+   border-radius: ${props => props.theme.borders.borderRadius1};
 `;
 
 export const CharacterName = styled("div")`

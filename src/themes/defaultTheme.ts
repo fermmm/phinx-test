@@ -10,11 +10,13 @@ export const defaultTheme: Theme = {
       text4: "#FFFFFF",
       text5: "#808080",
       text6: "#515151",
+      scrollbar: "#FFFFFF",
+      scrollbarThumb: "#565656",
       divider: "#0000000a"
    },
    shadows: {
       elevation1: "1px 1px 6px 0px #00000012",
-      divider: "0px 0px 2px 0px #0000002b"
+      dividerShadow: "0px 0px 2px 0px #0000002b"
    },
    fonts: {
       font1: "'Roboto', sans-serif",
@@ -26,5 +28,9 @@ export const defaultTheme: Theme = {
       size5: "12px",
       weight1: "600",
       weight2: "700"
+   },
+   borders: {
+      borderRadius1: "5px",
+      borderRadius2: "8px"
    }
 };

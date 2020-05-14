@@ -28,7 +28,7 @@ export const ModalDimmer = styled("div")`
    width: 100%;
    height: 100%;
    background-color: black;
-   opacity: .5;
+   opacity: .76;
    z-index: 1000;
 `;
 
@@ -44,7 +44,7 @@ export const ModalWindow = styled("div")`
    padding-left: 22px;
    padding-right: 13px;
    background-color: white;
-   border-radius: 8px;
+   border-radius: ${props => props.theme.borders.borderRadius2};
    z-index: 1001;
 `;
 
@@ -61,4 +61,8 @@ export const ChildrenContainer = styled("div")`
    height: 100%;
    overflow-x: hidden;
    overflow-y: auto;
+
+   &::-webkit-scrollbar {
+      width: 4px;
+   }
 `;
