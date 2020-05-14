@@ -11,14 +11,15 @@ export const InputContainer = styled("div")`
       margin-right: 5px;
       cursor: default;
       user-select: none;
+      font-size:  ${props => props.theme.fonts.size2};
    }
 `;
 
 export const InputStyled = styled("input")`
    width: 100%;
    color: ${props => props.theme.colors.text3};
-   font-family: 'Roboto', sans-serif;
-   font-size: 20px;  
+   font-family: ${props => props.theme.fonts.font1};
+   font-size:  ${props => props.theme.fonts.size3};  
    border: none;
    &::placeholder {
       color: ${props => props.theme.colors.text1};

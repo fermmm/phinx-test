@@ -13,10 +13,11 @@ export const SearchBarContainer = styled("div")`
    padding-left: 20px;
    width: 100vw;
    height: 69px;
+   margin-bottom: 64px;
 `;
 
 export const InputStyled = styled(Input)`
-   max-width: 1164px;
+   max-width: 1126px;
 `;
 
 export const IconButtonStyled = styled(IconButton)`
