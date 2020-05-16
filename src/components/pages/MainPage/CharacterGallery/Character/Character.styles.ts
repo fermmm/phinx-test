@@ -2,16 +2,30 @@
 import styled from "styled-components";
 import { IconButton } from '../../../../UIComponents/IconButton/IconButton';
 
-export const CharacterContainer = styled("div")`
-   display: flex;
-   align-items: flex-end;
+export const CharacterMainContainer = styled("div")`
    position: relative;
    width: 258px;
    height: 384px;
-   background-color: red;
    margin: 15px 17.5px;
+   border-radius: ${props => props.theme.borders.borderRadius1};
+   overflow: hidden;
+   cursor: pointer;
+`;
+
+export const CharacterUIContainer = styled("div")`
+   display: flex;
+   align-items: flex-end;
+   position: absolute;
+   width: 100%;
+   height: 100%;
    padding: 26px 23px;
    border-radius: ${props => props.theme.borders.borderRadius1};
+   overflow: hidden;
+`;
+
+export const ThumbnailImage = styled("img")`
+   width: 100%;
+   position: absolute;
 `;
 
 export const CharacterName = styled("div")`

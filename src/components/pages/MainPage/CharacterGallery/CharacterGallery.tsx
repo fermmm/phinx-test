@@ -1,20 +1,20 @@
 import React, { FC } from "react";
 import { hot } from "react-hot-loader";
-import { CharactersContainer, GalleryContainer } from './CharacterGallery.styles';
-import Character from "./Character/Character";
+import Character, { PropsCharacter } from "./Character/Character";
+import { CharactersContainer, GalleryContainer } from "./CharacterGallery.styles";
 
-const CharacterGallery: FC = () => {
+interface PropsCharacterGallery {
+   characters: PropsCharacter[];
+   onClick: (character: PropsCharacter) => void;
+}
+
+const CharacterGallery: FC<PropsCharacterGallery> = ({ characters, onClick }) => {
    return (
       <GalleryContainer>
          <CharactersContainer>
-            <Character />
-            <Character />
-            <Character />
-            <Character />
-            <Character />
-            <Character />
-            <Character />
-            <Character />
+            {characters.map(character => (
+               <Character onClick={() => onClick(character)} {...character} key={character.id} />
+            ))}
          </CharactersContainer>
       </GalleryContainer>
    );

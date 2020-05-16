@@ -12,7 +12,8 @@ export const defaultTheme: Theme = {
       text6: "#515151",
       scrollbar: "#FFFFFF",
       scrollbarThumb: "#565656",
-      divider: "#0000000a"
+      divider: "#0000000a",
+      comicHover: "#ececec"
    },
    shadows: {
       elevation1: "1px 1px 6px 0px #00000012",
@@ -26,8 +27,11 @@ export const defaultTheme: Theme = {
       size3: "20px",
       size4: "25px",
       size5: "12px",
+      size6: "18px",
       weight1: "600",
-      weight2: "700"
+      weight2: "700",
+      letterSpacing1: "-0.26px",
+      lineHeight1: "21px"
    },
    borders: {
       borderRadius1: "5px",

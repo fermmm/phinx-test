@@ -54,6 +54,7 @@ export const ModalTitle = styled("div")`
    font-size: ${props => props.theme.fonts.size4};
    font-weight: ${props => props.theme.fonts.weight2};
    margin-bottom: 24px;
+   padding-right: 30px;
 `;
 
 export const ChildrenContainer = styled("div")`

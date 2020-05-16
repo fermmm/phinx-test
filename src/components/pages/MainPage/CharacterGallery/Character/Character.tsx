@@ -1,15 +1,29 @@
 import React, { FC } from "react";
 import { hot } from "react-hot-loader";
-import { CharacterContainer, CharacterName, IconButtonStyled } from './Character.styles';
+import {
+   CharacterMainContainer,
+   CharacterName,
+   CharacterUIContainer,
+   IconButtonStyled,
+   ThumbnailImage,
+} from "./Character.styles";
 
-const Character: FC = () => {
+export interface PropsCharacter {
+   name: string;
+   thumbnailUrl: string;
+   id: number;
+   onClick?: () => void;
+}
+
+const Character: FC<PropsCharacter> = ({ name, thumbnailUrl, onClick }) => {
    return (
-      <CharacterContainer >
-         <IconButtonStyled iconId={'star'}/>
-         <CharacterName>
-            Spider-Man
-         </CharacterName>
-      </CharacterContainer>
+      <CharacterMainContainer onClick={onClick}>
+         <ThumbnailImage src={thumbnailUrl} />
+         <CharacterUIContainer>
+            <IconButtonStyled iconId={"star"} />
+            <CharacterName>{name}</CharacterName>
+         </CharacterUIContainer>
+      </CharacterMainContainer>
    );
 };
 

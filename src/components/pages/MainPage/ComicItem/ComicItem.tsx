@@ -1,7 +1,5 @@
 import React, { FC } from "react";
 import { hot } from "react-hot-loader";
-// @ts-ignore
-import testImage from "../../../../../assets/test-image.png";
 import {
    ComicItemContainer,
    ComicItemDataContainer,
@@ -12,18 +10,25 @@ import {
    Title,
 } from "./ComicItem.styles";
 
-const ComicItem: FC = () => {
+interface PropsComic {
+   title: string;
+   description: string;
+   thumbnailUrl: string;
+   onClick: () => void;
+}
+
+const ComicItem: FC<PropsComic> = ({title, description, thumbnailUrl, onClick}) => {
    return (
-      <ComicItemContainer>
+      <ComicItemContainer onClick={onClick}>
          <ImageContainer>
-            <PreviewImage src={testImage} />
+            <PreviewImage src={thumbnailUrl} />
          </ImageContainer>
          <ComicItemDataContainer>
             <Title>
-               Spider-man
-               <IconButtonStyled iconId={"star_border"} />
+               {title}
+               {/* <IconButtonStyled iconId={"star_border"} /> */}
             </Title>
-            <Description>HUNTED AFTERMATH! The fallout</Description>
+            <Description>{description}</Description>
          </ComicItemDataContainer>
       </ComicItemContainer>
    );

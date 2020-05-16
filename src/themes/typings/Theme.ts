@@ -17,6 +17,7 @@ interface ThemeColors {
    scrollbar: string;
    scrollbarThumb: string;
    divider: string;
+   comicHover: string;
 }
 
 interface ThemeShadows {
@@ -32,8 +33,11 @@ interface ThemeFonts {
    size3: string;
    size4: string;
    size5: string;
+   size6: string;
    weight1: string;
    weight2: string;
+   letterSpacing1: string;
+   lineHeight1: string;
 }
 
 interface ThemeBorders {
