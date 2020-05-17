@@ -7,7 +7,7 @@ import { selectComicAction } from "../../../../../context/actions/comics/comicsA
 import { GlobalStateContext } from "../../../../../context/store";
 import { ComicData } from "../../../../../context/store/comics/comicsState";
 import Modal from "../../../../UIComponents/Modal/Modal";
-import ComicItem from "../../ComicItem/ComicItem";
+import ComicItem from "./ComicItem/ComicItem";
 
 interface PropsComicListModal {
    visible: boolean;

@@ -1,6 +1,6 @@
 // tslint:disable: typedef
 import styled from "styled-components";
-import { IconButton } from "../../../UIComponents/IconButton/IconButton";
+import { IconButton } from "../../../../../UIComponents/IconButton/IconButton";
 
 export const ComicItemContainer = styled("div")`
    display: flex;
