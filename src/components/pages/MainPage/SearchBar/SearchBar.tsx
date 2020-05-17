@@ -1,34 +1,35 @@
-import React, { FC, useEffect } from "react";
+import { History } from "history";
+import React, { FC, useEffect, useState } from "react";
 import { hot } from "react-hot-loader";
-import { Divider } from "../../../UIComponents/Divider/Divider.styles";
+import { useHistory } from "react-router-dom";
 import {
-   IconButtonStyled,
-   InputStyled,
-   SearchBarContainer,
-   SearchIconStyled,
-} from "./SearchBar.styles";
+   clearCharactersListAction,
+   requestCharactersAction,
+} from "../../../../context/actions/characters/charactersActions";
+import { GlobalStateContext } from "../../../../context/store";
+import { Divider } from "../../../UIComponents/Divider/Divider.styles";
+import { InputStyled, SearchBarContainer, SearchIconStyled } from "./SearchBar.styles";
+
 // @ts-ignore
 import marvelLogo from "../../../../assets/marvelLogo.png";
 
-let previousSearchBarText: string;
+const SearchBar: FC = () => {
+   const { dispatch } = React.useContext(GlobalStateContext);
+   const [searchBarText, setSearchBarText] = useState<string>("");
+   const history: History = useHistory();
 
-interface PropsSearchBar {
-   value: string;
-   onChange: (value: string) => void;
-   onUserStopsTyping: () => void;
-}
-
-const SearchBar: FC<PropsSearchBar> = props => {
    useEffect(() => {
-      updateSearchBarHistory();
-      const timer = setTimeout(
-         () => !searchBarChanged() && props.onUserStopsTyping(),
-         600,
-      );
+      const timer = setTimeout(onUserStopsTyping, 600);
       return () => clearTimeout(timer);
-   }, [props.value]);
-   const updateSearchBarHistory = () => previousSearchBarText = props.value;
-   const searchBarChanged = () => previousSearchBarText !== props.value;
+   }, [searchBarText]);
+
+   const onUserStopsTyping = () => {
+      if (searchBarText) {
+         dispatch(clearCharactersListAction());
+         dispatch(requestCharactersAction(searchBarText));
+         history.push("/");
+      }
+   };
 
    return (
       <SearchBarContainer>
@@ -37,10 +38,10 @@ const SearchBar: FC<PropsSearchBar> = props => {
          <InputStyled
             icon={<SearchIconStyled iconId={"search"} />}
             placeholder={"Buscar..."}
-            value={props.value}
-            onChange={event => props.onChange(event.target.value ?? "")}
+            value={searchBarText}
+            onChange={event => setSearchBarText(event.target.value ?? "")}
          />
-         <IconButtonStyled iconId={"star_border"} onClick={() => console.log("clicked")} />
+         {/* <IconButtonStyled iconId={"star_border"} onClick={() => console.log("clicked")} /> */}
          <Divider />
       </SearchBarContainer>
    );

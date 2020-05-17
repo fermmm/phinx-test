@@ -1,5 +1,7 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
 import { hot } from "react-hot-loader";
+import { GlobalStateContext } from "../../../../context/store";
+import { uppercaseFirstLetter } from "../../../../tools/string";
 import {
    ComicDataContainer,
    ComicFullInfoContainer,
@@ -8,26 +10,18 @@ import {
    Details,
    Title,
 } from "./ComicFullInfo.styles";
-import { uppercaseFirstLetter } from "../../../../tools/string";
 
-interface PropsComicFullInfo {
-   title: string;
-   publishedDate: string;
-   creators: { role: string; name: string }[];
-   description: string;
-   coverImageUrl: string;
-}
+const ComicFullInfo: FC = () => {
+   const { state } = useContext(GlobalStateContext);
 
-const ComicFullInfo: FC<PropsComicFullInfo> = ({
-   title,
-   publishedDate,
-   creators,
-   description,
-   coverImageUrl,
-}) => {
+   if (!state.selectedComic) {
+      return null;
+   }
+
+   const { title, publishedDate, creators, description, thumbnailUrl } = state.selectedComic;
    return (
       <ComicFullInfoContainer>
-         <CoverImage src={coverImageUrl} />
+         <CoverImage src={thumbnailUrl} />
          <ComicDataContainer>
             <Title>{title}</Title>
             <Details>
@@ -38,7 +32,7 @@ const ComicFullInfo: FC<PropsComicFullInfo> = ({
                   </span>
                ))}
             </Details>
-            <Description>{description}</Description>
+            <Description dangerouslySetInnerHTML={{__html: description}} />
          </ComicDataContainer>
       </ComicFullInfoContainer>
    );

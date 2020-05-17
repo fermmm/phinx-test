@@ -9,7 +9,7 @@ export interface CharactersResponse {
       limit: number;
       total: number;
       count: number;
-      results: CharacterData[];
+      results: CharacterServerData[];
    };
    etag: string;
 }
@@ -25,12 +25,12 @@ export interface CharactersComicsResponse {
       limit: number;
       total: number;
       count: number;
-      results: ComicData[];
+      results: ComicServerData[];
    };
    etag: string;
 }
 
-export interface ComicData {
+export interface ComicServerData {
    id: number;
    digitalId: number;
    title: string;
@@ -149,7 +149,7 @@ export interface ComicData {
    };
 }
 
-export interface CharacterData {
+export interface CharacterServerData {
    id: number;
    name: string;
    description: string;

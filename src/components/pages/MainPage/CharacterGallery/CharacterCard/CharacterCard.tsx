@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { hot } from "react-hot-loader";
+import { CharacterData } from '../../../../../context/store/characters/charactersState';
 import {
    CharacterMainContainer,
    CharacterName,
@@ -8,14 +9,11 @@ import {
    ThumbnailImage,
 } from "./Character.styles";
 
-export interface PropsCharacter {
-   name: string;
-   thumbnailUrl: string;
-   id: number;
+export interface PropsCharacter extends CharacterData {
    onClick?: () => void;
 }
 
-const Character: FC<PropsCharacter> = ({ name, thumbnailUrl, onClick }) => {
+const CharacterCard: FC<PropsCharacter> = ({ name, thumbnailUrl, onClick }) => {
    return (
       <CharacterMainContainer onClick={onClick}>
          <ThumbnailImage src={thumbnailUrl} />
@@ -27,4 +25,4 @@ const Character: FC<PropsCharacter> = ({ name, thumbnailUrl, onClick }) => {
    );
 };
 
-export default hot(module)(Character);
+export default hot(module)(CharacterCard);

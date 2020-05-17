@@ -1,7 +1,7 @@
 // tslint:disable: typedef
 import styled from "styled-components";
 
-export const CharactersContainer = styled("div")`
+export const CardsContainer = styled("div")`
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
