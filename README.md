@@ -16,5 +16,6 @@ Please provide a feedback since this test is very time consuming.
 https://phinx-test.now.sh
 
 ## To run the project locally:
-1.``npm install``
-2.``npm start``
+1.`npm install`
+Then:
+2.`npm start`
