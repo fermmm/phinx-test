@@ -1,7 +1,7 @@
 # Test for Phinx: Fernando Medina
 
 ## Please read this first:
-I ran out of time (I'm currently working for a company) so I finished the test without the following points:
+I ran out of time (I'm currently working for a company, I don't have much free time) so I finished the test without the following points:
 
 1. Unit tests for all the components (If you want me to send some Jest + Enzyme demostrations let me know)
 2. Bookmarking (If you want me to send some Local Storage code demostration let me know)
