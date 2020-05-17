@@ -1,5 +1,5 @@
 import { httpRequest, HttpRequestResponse } from "../tools/httpRequest";
-import { CharactersResponse, ThumbnailData, CharactersComicsResponse } from "../tools/typings";
+import { CharactersComicsResponse, CharactersResponse, ThumbnailData } from "../tools/typings";
 
 export async function getCharactersByName(
    name: string,
@@ -23,6 +23,15 @@ export async function getComicsByCharacterId(
    });
 }
 
-export function getThumbnailUrl(thumbnailData: ThumbnailData): string {
-   return `${thumbnailData.path}/portrait_uncanny.${thumbnailData.extension}`;
+export function getThumbnailUrl(thumbnailData: ThumbnailData, size: ThumbnailSize = ThumbnailSize.PortraitUncanny): string {
+   return `${thumbnailData.path}/${size}.${thumbnailData.extension}`;
+}
+
+export enum ThumbnailSize {
+   PortraitSmall = "portrait_small", // 50x75px
+   PortraitMedium = "portrait_medium", // 100x150px
+   PortraitXlarge = "portrait_xlarge", // 150x225px
+   PortraitFantastic = "portrait_fantastic", // 168x252px
+   PortraitUncanny = "portrait_uncanny", // 300x450px
+   PortraitIncredible = "portrait_incredible", // 216x324px
 }

@@ -1,3 +1,5 @@
+import { ThumbnailData } from "../../../Api/tools/typings";
+
 export interface ComicsState {
    comicList: ComicData[];
    selectedComic: ComicData;
@@ -16,5 +18,5 @@ export interface ComicData {
    publishedDate: string;
    creators: { role: string; name: string }[];
    description: string;
-   thumbnailUrl: string;
+   thumbnailData: ThumbnailData;
 }

@@ -2,6 +2,7 @@ import { History } from "history";
 import React, { FC, useContext } from "react";
 import { hot } from "react-hot-loader";
 import { useHistory } from "react-router-dom";
+import { getThumbnailUrl, ThumbnailSize } from "../../../../../Api/characters/characters";
 import { selectComicAction } from "../../../../../context/actions/comics/comicsActions";
 import { GlobalStateContext } from "../../../../../context/store";
 import { ComicData } from "../../../../../context/store/comics/comicsState";
@@ -36,7 +37,7 @@ const ComicListModal: FC<PropsComicListModal> = ({ visible, onCloseClick }) => {
                   <ComicItem
                      title={comic.title}
                      description={comic.description}
-                     thumbnailUrl={comic.thumbnailUrl}
+                     thumbnailUrl={getThumbnailUrl(comic.thumbnailData, ThumbnailSize.PortraitMedium)}
                      onClick={() => onComicClick(comic)}
                      key={comic.id}
                   />

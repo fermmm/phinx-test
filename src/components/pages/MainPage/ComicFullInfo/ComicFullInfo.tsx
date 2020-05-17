@@ -1,5 +1,6 @@
 import React, { FC, useContext } from "react";
 import { hot } from "react-hot-loader";
+import { getThumbnailUrl } from "../../../../Api/characters/characters";
 import { GlobalStateContext } from "../../../../context/store";
 import { uppercaseFirstLetter } from "../../../../tools/string";
 import {
@@ -18,10 +19,16 @@ const ComicFullInfo: FC = () => {
       return null;
    }
 
-   const { title, publishedDate, creators, description, thumbnailUrl } = state.selectedComic;
+   const {
+      title,
+      publishedDate,
+      creators,
+      description,
+      thumbnailData: thumbnailUrl,
+   } = state.selectedComic;
    return (
       <ComicFullInfoContainer>
-         <CoverImage src={thumbnailUrl} />
+         <CoverImage src={getThumbnailUrl(thumbnailUrl)} />
          <ComicDataContainer>
             <Title>{title}</Title>
             <Details>
@@ -32,7 +39,7 @@ const ComicFullInfo: FC = () => {
                   </span>
                ))}
             </Details>
-            <Description dangerouslySetInnerHTML={{__html: description}} />
+            <Description dangerouslySetInnerHTML={{ __html: description }} />
          </ComicDataContainer>
       </ComicFullInfoContainer>
    );

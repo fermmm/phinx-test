@@ -44,7 +44,7 @@ const reduceComicList = (request: HttpRequestResponse<CharactersComicsResponse>)
          ),
          creators: comic.creators.items,
          description: comic.description,
-         thumbnailUrl: getThumbnailUrl(comic.thumbnail),
+         thumbnailData: comic.thumbnail,
       }));
       return finalComicsList;
    }
