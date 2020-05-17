@@ -1,6 +1,7 @@
 // tslint:disable: typedef
 import styled from "styled-components";
 import { IconButton } from '../../../../UIComponents/IconButton/IconButton';
+import { maxWidth } from "../../../../../tools/breakpoints";
 
 export const CharacterMainContainer = styled("div")`
    position: relative;
@@ -10,6 +11,12 @@ export const CharacterMainContainer = styled("div")`
    border-radius: ${props => props.theme.borders.borderRadius1};
    overflow: hidden;
    cursor: pointer;
+
+   ${maxWidth.sm`
+      margin: 15px 5px;
+      width: 150px;
+      height: 225px;
+	`}
 `;
 
 export const CharacterUIContainer = styled("div")`
