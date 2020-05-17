@@ -17,5 +17,5 @@ https://phinx-test.now.sh
 
 ## To run the project locally:
 1.`npm install`
-Then:
+
 2.`npm start`
