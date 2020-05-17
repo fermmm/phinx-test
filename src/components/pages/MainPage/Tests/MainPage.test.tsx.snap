@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MainPage /> Renders correctly 1`] = `
+<MainPagestyles__MainPageContainer>
+  <SearchBar />
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      path="/comic"
+    />
+  </Switch>
+</MainPagestyles__MainPageContainer>
+`;
