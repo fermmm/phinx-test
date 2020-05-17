@@ -144,9 +144,4 @@ module.exports = {
       children: false,
       colors: true,
    },
-
-   env: {
-      SERVER_URL: process.env.SERVER_URL,
-      PUBLIC_API_KEY: process.env.PUBLIC_API_KEY
-    },
 };
