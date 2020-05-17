@@ -12,6 +12,9 @@ I ran out of time (I'm currently working for a company) so I finished the test w
 To compensate, the test is done with strong TypeScript usage and many good practices. I hope you like it.
 Please provide a feedback since this test is very time consuming.
 
+## Deploy url:
+https://phinx-test.now.sh
+
 ## To run the project locally:
 1.`npm install`
 2.`npm start`
